@@ -15,22 +15,22 @@ jobs:
     strategy:
       matrix:
         include:
-          - target: aarch64-unknown-linux-musl
-            image: aarch64-musl
-          - target: arm-unknown-linux-musleabi
-            image: arm-musleabi
-          - target: arm-unknown-linux-musleabihf
-            image: arm-musleabihf
-          - target: armv7-unknown-linux-musleabi
-            image: armv7-musleabi
-          - target: armv7-unknown-linux-musleabihf
-            image: armv7-musleabihf
-          - target: i686-unknown-linux-musl
-            image: i686-musl
-          - target: x86_64-unknown-linux-musl
-            image: x86_64-musl
-          # - target: mipsel-unknown-linux-musl
-          #   image: mipsel-musl
+          # - target: aarch64-unknown-linux-musl
+          #   image: aarch64-musl
+          # - target: arm-unknown-linux-musleabi
+          #   image: arm-musleabi
+          # - target: arm-unknown-linux-musleabihf
+          #   image: arm-musleabihf
+          # - target: armv7-unknown-linux-musleabi
+          #   image: armv7-musleabi
+          # - target: armv7-unknown-linux-musleabihf
+          #   image: armv7-musleabihf
+          # - target: i686-unknown-linux-musl
+          #   image: i686-musl
+          # - target: x86_64-unknown-linux-musl
+          #   image: x86_64-musl
+          - target: mipsel-unknown-linux-musl
+            image: mipsel-musl
       fail-fast: false
     container:
       image: ghcr.io/rust-cross/rust-musl-cross:${{ matrix.image }}
